@@ -103,6 +103,9 @@ spec:
           {{- if ne .Values.resourcesPreset "none" }}
           resources: {{- include "common.resources.preset" (dict "type" .Values.resourcesPreset) | nindent 12 }}
           {{- end }}
+          {{- if ne .Values.priorityClassName "none" }}
+          resources: {{- include "common.resources.priorityClassName" (dict "type" .Values.priorityClassName) | nindent 12 }}
+          {{- end }}
           {{- end }}
           ports:
             - name: http
