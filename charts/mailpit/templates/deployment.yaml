@@ -103,9 +103,6 @@ spec:
           {{- if ne .Values.resourcesPreset "none" }}
           resources: {{- include "common.resources.preset" (dict "type" .Values.resourcesPreset) | nindent 12 }}
           {{- end }}
-          {{- if ne .Values.priorityClassName "" }}
-          priorityClassName: {{ .Values.priorityClassName | quote }}
-          {{- end }}
           {{- end }}
           ports:
             - name: http
@@ -145,6 +142,9 @@ spec:
         {{- with .Values.sidecars }}
         {{- include "common.tplvalues.render" ( dict "value" . "context" $) | nindent 8 }}
         {{- end }}
+      {{- with .Values.priorityClassName }}
+      priorityClassName: {{ . | quote }}
+      {{- end }}
       {{- with .Values.tolerations }}
       tolerations: {{- include "common.tplvalues.render" ( dict "value" . "context" $) | nindent 8 }}
       {{- end }}
