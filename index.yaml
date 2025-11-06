@@ -2463,6 +2463,25 @@ entries:
     urls:
     - https://github.com/jouve/charts/releases/download/hnc-0.1.0/hnc-0.1.0.tgz
     version: 0.1.0
+  kubevirt:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+    apiVersion: v2
+    appVersion: v1.6.1
+    created: "2025-11-06T13:59:18.288270048Z"
+    description: A Helm chart for Kubernetes
+    digest: 160752f9c8d03e0bf5b9e33278bda2f1d84ea5446c5377cdba3493cc144c5d7b
+    maintainers:
+    - name: jouve
+      url: https://github.com/jouve
+    name: kubevirt
+    sources:
+    - https://github.com/jouve/charts
+    - https://kubevirt.io
+    type: application
+    urls:
+    - https://github.com/kanonik-fr/jouve-charts/releases/download/kubevirt-0.0.1/kubevirt-0.0.1.tgz
+    version: 0.0.1
   mailpit:
   - annotations:
       artifacthub.io/license: GPL-3.0-or-later
@@ -5260,4 +5279,4 @@ entries:
     urls:
     - https://github.com/jouve/charts/releases/download/subnamespace-0.1.0/subnamespace-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-27T12:04:44.104555348Z"
+generated: "2025-11-06T13:59:18.288931655Z"
